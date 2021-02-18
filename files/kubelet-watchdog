@@ -1,0 +1,5 @@
+#!/bin/bash
+if journalctl -u kubelet --since -1m | grep ":443: use of closed network connection" >/dev/null; then
+  echo "Restart kubelet"
+  systemctl restart kubelet
+fi

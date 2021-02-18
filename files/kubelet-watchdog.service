@@ -1,0 +1,7 @@
+[Unit]
+Description=kubelet-watchdog
+
+[Service]
+User=root
+Type=oneshot
+ExecStart=/opt/bin/kubelet-watchdog

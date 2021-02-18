@@ -1,0 +1,13 @@
+[Unit]
+Description=kubelet-watchdog
+
+[Timer]
+OnBootSec=10min
+OnUnitInactiveSec=1min
+OnStartupSec=1min
+Persistent=true
+Unit=kubelet-watchdog.service
+
+[Install]
+WantedBy=timers.target
+
